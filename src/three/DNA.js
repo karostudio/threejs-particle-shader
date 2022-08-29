@@ -6,6 +6,8 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
 import vertexShader from './shaders/vertex.glsl';
 import fragmentShader from './shaders/fragment.glsl';
 
+const path = 'https://karo.studio/assets/karo.glb?v=1';
+
 export default class DNA {
     constructor() {}
     async setLoaders() {
@@ -15,7 +17,7 @@ export default class DNA {
                 this.dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
                 this.gltfLoader = new GLTFLoader();
                 this.gltfLoader.setDRACOLoader(this.dracoLoader);
-                this.gltfLoader.load('https://karo.studio/assets/karo.glb?v=1', gltf => {
+                this.gltfLoader.load(path, gltf => {
                     // console.log(gltf);
                     this.setMaterial();
                     this.gltf = gltf;

@@ -22,6 +22,8 @@ In ```src/DNA.js``` file replace ```path``` with your own 3d model url. After th
 After cloning this repository, run the following commands:
 ```npm install```
 ```npm run dev```
+
+
 Now browse to ```http://localhost:3000``` and you should see the K 3D model rotating.
 
 ## Author
